@@ -23,6 +23,9 @@ use App\Http\Controllers\PainelController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\BuscaUsuarioController;
 use App\Http\Controllers\ChecklistControllerPDFS;
+use App\Http\Controllers\HospitalController;
+
+
 
 
 
@@ -51,8 +54,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('painel', PainelController::class);
     Route::resource('pesquisar',ProdutoController::class);
     Route::resource('buscaUsuario',BuscaUsuarioController::class);
-
- 
+    Route::resource('hospital',HospitalController::class);
+   
+   
     Route::resource('sucesso', MonitoramentoController::class);
     Route::resource('aerio', aerioController::class);
     Route::resource('apaga', apagaController::class);
